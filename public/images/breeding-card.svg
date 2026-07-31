@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" fill="none">
+  <rect width="300" height="150" fill="#FDF2F8"/>
+  <!-- Heart -->
+  <path d="M150 55 C150 35, 120 25, 110 45 C100 65, 150 95, 150 95 C150 95, 200 65, 190 45 C180 25, 150 35, 150 55Z" fill="#EC4899" opacity="0.2"/>
+  <!-- Mother cow -->
+  <ellipse cx="120" cy="110" rx="24" ry="14" fill="#4E342E" opacity="0.6"/>
+  <circle cx="102" cy="100" r="9" fill="#4E342E" opacity="0.6"/>
+  <!-- Calf -->
+  <ellipse cx="175" cy="115" rx="16" ry="10" fill="#6D4C41" opacity="0.5"/>
+  <circle cx="163" cy="108" r="6" fill="#6D4C41" opacity="0.5"/>
+  <!-- DNA helix hint -->
+  <path d="M230 40 Q240 60 230 80 Q220 100 230 120" stroke="#EC4899" stroke-width="1.5" fill="none" opacity="0.3"/>
+  <path d="M240 40 Q230 60 240 80 Q250 100 240 120" stroke="#EC4899" stroke-width="1.5" fill="none" opacity="0.3"/>
+</svg>

@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" fill="none">
+  <rect width="300" height="150" fill="#F5F3FF"/>
+  <!-- Chart area -->
+  <rect x="40" y="25" width="220" height="105" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Bar chart -->
+  <rect x="65" y="85" width="20" height="35" rx="3" fill="#8B5CF6" opacity="0.4"/>
+  <rect x="95" y="65" width="20" height="55" rx="3" fill="#8B5CF6" opacity="0.5"/>
+  <rect x="125" y="50" width="20" height="70" rx="3" fill="#8B5CF6" opacity="0.6"/>
+  <rect x="155" y="60" width="20" height="60" rx="3" fill="#16A34A" opacity="0.7"/>
+  <rect x="185" y="40" width="20" height="80" rx="3" fill="#16A34A" opacity="0.8"/>
+  <rect x="215" y="35" width="20" height="85" rx="3" fill="#16A34A" opacity="0.9"/>
+  <!-- Trend line -->
+  <path d="M75 80 L105 62 L135 50 L165 55 L195 38 L225 32" stroke="#16A34A" stroke-width="2" fill="none" opacity="0.6"/>
+  <!-- R symbol -->
+  <text x="50" y="45" font-family="Arial" font-size="12" fill="#8B5CF6" opacity="0.6" font-weight="bold">R</text>
+</svg>

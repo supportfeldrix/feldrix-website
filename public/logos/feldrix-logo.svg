@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 80">
+  <!-- Circular emblem -->
+  <g transform="translate(5, 5)">
+    <!-- Outer circle -->
+    <circle cx="35" cy="35" r="33" fill="none" stroke="#2D6A2F" stroke-width="3"/>
+    <!-- Inner arc (top) -->
+    <path d="M 10 40 Q 35 5 60 40" fill="none" stroke="#2D6A2F" stroke-width="2"/>
+    <!-- Sun rays -->
+    <circle cx="35" cy="28" r="8" fill="#2D6A2F"/>
+    <line x1="35" y1="16" x2="35" y2="12" stroke="#2D6A2F" stroke-width="2"/>
+    <line x1="45" y1="20" x2="48" y2="17" stroke="#2D6A2F" stroke-width="2"/>
+    <line x1="25" y1="20" x2="22" y2="17" stroke="#2D6A2F" stroke-width="2"/>
+    <!-- Rolling hills -->
+    <path d="M 8 50 Q 20 38 35 45 Q 50 52 62 42" fill="none" stroke="#2D6A2F" stroke-width="2"/>
+    <path d="M 12 58 Q 25 48 40 53 Q 55 58 62 50" fill="none" stroke="#2D6A2F" stroke-width="2"/>
+    <!-- Wheat stalk -->
+    <path d="M 55 15 Q 58 25 56 35" fill="none" stroke="#2D6A2F" stroke-width="1.5"/>
+    <ellipse cx="55" cy="12" rx="2" ry="4" fill="#2D6A2F" transform="rotate(-10 55 12)"/>
+    <ellipse cx="57" cy="16" rx="2" ry="4" fill="#2D6A2F" transform="rotate(10 57 16)"/>
+    <ellipse cx="54" cy="20" rx="2" ry="4" fill="#2D6A2F" transform="rotate(-10 54 20)"/>
+  </g>
+  <!-- Text -->
+  <text x="85" y="38" font-family="Arial Black, sans-serif" font-size="32" font-weight="900" fill="#2D6A2F" letter-spacing="-0.5">FELDRIX</text>
+  <text x="85" y="58" font-family="Arial, sans-serif" font-size="11" fill="#2D6A2F" letter-spacing="1">FARM SMARTER. GROW STRONGER.</text>
+</svg>

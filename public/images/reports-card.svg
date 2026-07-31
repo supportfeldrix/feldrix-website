@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 150" fill="none">
+  <rect width="300" height="150" fill="#EFF6FF"/>
+  <!-- Chart background -->
+  <rect x="50" y="25" width="200" height="105" rx="10" fill="white" stroke="#E2E8F0" stroke-width="1"/>
+  <!-- Line chart -->
+  <path d="M70 100 L100 80 L130 90 L160 60 L190 70 L220 45" stroke="#3B82F6" stroke-width="2.5" fill="none" opacity="0.8"/>
+  <!-- Area fill -->
+  <path d="M70 100 L100 80 L130 90 L160 60 L190 70 L220 45 L220 120 L70 120Z" fill="#3B82F6" opacity="0.08"/>
+  <!-- Dots on line -->
+  <circle cx="70" cy="100" r="4" fill="#3B82F6" opacity="0.6"/>
+  <circle cx="130" cy="90" r="4" fill="#3B82F6" opacity="0.6"/>
+  <circle cx="160" cy="60" r="4" fill="#16A34A" opacity="0.8"/>
+  <circle cx="220" cy="45" r="4" fill="#16A34A" opacity="0.8"/>
+  <!-- Grid lines -->
+  <line x1="70" y1="120" x2="230" y2="120" stroke="#E2E8F0" stroke-width="1"/>
+  <line x1="70" y1="90" x2="230" y2="90" stroke="#F1F5F9" stroke-width="1"/>
+  <line x1="70" y1="60" x2="230" y2="60" stroke="#F1F5F9" stroke-width="1"/>
+</svg>
