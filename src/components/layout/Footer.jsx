@@ -44,12 +44,6 @@ const contactDetails = [
   { icon: <LocationOnOutlinedIcon sx={{ fontSize: 14 }} />, text: 'South Africa' },
 ];
 
-const badges = [
-  { emoji: '☁️', label: 'Cloud Based' },
-  { emoji: '🤖', label: 'AI Powered' },
-  { emoji: '🇿🇦', label: 'Built in South Africa' },
-];
-
 const Footer = () => (
   <Box
     component="footer"
@@ -101,36 +95,12 @@ const Footer = () => (
             </Typography>
 
             {/* Contact details */}
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5, mb: 4 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
               {contactDetails.map((item) => (
                 <Box key={item.text} sx={{ display: 'flex', alignItems: 'center', gap: 1.2 }}>
                   <Box sx={{ color: 'rgba(255,255,255,0.35)' }}>{item.icon}</Box>
                   <Typography sx={{ color: 'rgba(255,255,255,0.5)', fontSize: '0.82rem' }}>
                     {item.text}
-                  </Typography>
-                </Box>
-              ))}
-            </Box>
-
-            {/* Badges */}
-            <Box sx={{ display: 'flex', flexWrap: 'wrap', gap: 1 }}>
-              {badges.map((badge) => (
-                <Box
-                  key={badge.label}
-                  sx={{
-                    display: 'inline-flex',
-                    alignItems: 'center',
-                    gap: 0.75,
-                    px: 1.5,
-                    py: 0.6,
-                    borderRadius: '100px',
-                    bgcolor: 'rgba(22, 163, 74, 0.08)',
-                    border: '1px solid rgba(22, 163, 74, 0.15)',
-                  }}
-                >
-                  <Typography sx={{ fontSize: '0.7rem' }}>{badge.emoji}</Typography>
-                  <Typography sx={{ fontSize: '0.7rem', color: '#22C55E', fontWeight: 600 }}>
-                    {badge.label}
                   </Typography>
                 </Box>
               ))}
