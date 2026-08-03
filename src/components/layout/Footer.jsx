@@ -12,20 +12,6 @@ const columns = [
     links: [
       { label: 'Features', path: '/features' },
       { label: 'Pricing', path: '/pricing' },
-      { label: 'Livestock', path: '/features' },
-      { label: 'Planner', path: '/features' },
-      { label: 'Finance', path: '/features' },
-      { label: 'AI Assistant', path: '/features' },
-    ],
-  },
-  {
-    title: 'Resources',
-    links: [
-      { label: 'Documentation', path: '/docs' },
-      { label: 'Help Centre', path: '/help' },
-      { label: 'Release Notes', path: '/releases' },
-      { label: 'Blog', path: '/blog' },
-      { label: 'API', path: '/api' },
     ],
   },
   {
@@ -33,8 +19,6 @@ const columns = [
     links: [
       { label: 'About', path: '/about' },
       { label: 'Contact', path: '/contact' },
-      { label: 'Careers', path: '/careers', badge: 'Coming Soon' },
-      { label: 'Roadmap', path: '/releases' },
     ],
   },
   {
@@ -42,8 +26,7 @@ const columns = [
     links: [
       { label: 'Privacy Policy', path: '/privacy' },
       { label: 'Terms of Service', path: '/terms' },
-      { label: 'Cookie Policy', path: '/privacy' },
-      { label: 'Security', path: '/privacy' },
+      { label: 'Cookie Policy', path: '/cookies' },
     ],
   },
 ];
@@ -97,7 +80,7 @@ const Footer = () => (
             gridTemplateColumns: {
               xs: '1fr',
               sm: 'repeat(2, 1fr)',
-              md: '2.4fr 1fr 1fr 1fr 1fr',
+              md: '2.4fr 1fr 1fr 1fr',
             },
             gap: { xs: 5, md: 6 },
             alignItems: 'start',

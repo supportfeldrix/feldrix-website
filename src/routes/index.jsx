@@ -10,6 +10,7 @@ const About = lazy(() => import('../pages/About'));
 const Contact = lazy(() => import('../pages/Contact'));
 const Privacy = lazy(() => import('../pages/Privacy'));
 const Terms = lazy(() => import('../pages/Terms'));
+const Cookies = lazy(() => import('../pages/Cookies'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 // Placeholder pages
@@ -41,6 +42,7 @@ const router = createBrowserRouter([
       { path: 'contact', element: <Contact /> },
       { path: 'privacy', element: <Privacy /> },
       { path: 'terms', element: <Terms /> },
+      { path: 'cookies', element: <Cookies /> },
       { path: 'blog', element: <Blog /> },
       { path: 'docs', element: <Docs /> },
       { path: 'releases', element: <Releases /> },
