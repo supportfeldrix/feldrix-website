@@ -2,7 +2,7 @@ import { Container, Box, Typography } from '@mui/material';
 import SectionTitle from '../../../components/common/SectionTitle';
 import { StaggerContainer } from '../../../components/animations';
 import { motion } from 'framer-motion';
-import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
+
 import PetsOutlinedIcon from '@mui/icons-material/PetsOutlined';
 import GrassOutlinedIcon from '@mui/icons-material/GrassOutlined';
 import PrecisionManufacturingOutlinedIcon from '@mui/icons-material/PrecisionManufacturingOutlined';
@@ -58,13 +58,13 @@ const FeatureGrid = () => (
                   border: '1px solid rgba(15,23,42,0.06)',
                   height: '100%',
                   overflow: 'hidden',
-                  cursor: 'default',
+                  cursor: 'pointer',
                   transition: 'all 0.3s cubic-bezier(0.4, 0, 0.2, 1)',
                   display: 'flex', flexDirection: 'column',
                   '&:hover': {
-                    borderColor: 'rgba(22,163,74,0.15)',
-                    boxShadow: '0 12px 40px rgba(0,0,0,0.06)',
-                    transform: 'translateY(-4px)',
+                    borderColor: '#16A34A',
+                    boxShadow: '0 16px 48px rgba(0,0,0,0.10)',
+                    transform: 'translateY(-6px)',
                     '& .feature-photo': { transform: 'scale(1.08)' },
                   },
                 }}
@@ -83,7 +83,7 @@ const FeatureGrid = () => (
                 </Box>
 
                 {/* Content */}
-                <Box sx={{ p: 2.5, flex: 1, display: 'flex', flexDirection: 'column' }}>
+                <Box sx={{ p: 2.5, pb: 3.5, flex: 1, display: 'flex', flexDirection: 'column' }}>
                   <Box
                     sx={{
                       width: 40, height: 40, borderRadius: '50%',
@@ -99,12 +99,9 @@ const FeatureGrid = () => (
                   <Typography sx={{ fontWeight: 700, fontSize: '0.85rem', mb: 0.75, color: 'text.primary' }}>
                     {feature.title}
                   </Typography>
-                  <Typography sx={{ fontSize: '0.75rem', color: 'text.secondary', lineHeight: 1.6, flex: 1, mb: 1.5 }}>
+                  <Typography sx={{ fontSize: '0.75rem', color: 'text.secondary', lineHeight: 1.6, flex: 1 }}>
                     {feature.description}
                   </Typography>
-                  <Box sx={{ display: 'flex', alignItems: 'center', gap: 0.5, color: 'primary.main', fontWeight: 600, fontSize: '0.75rem', cursor: 'pointer', transition: 'gap 0.2s ease', '&:hover': { gap: 0.8 } }}>
-                    Learn more <ArrowForwardIcon sx={{ fontSize: '0.8rem' }} />
-                  </Box>
                 </Box>
               </Box>
             </motion.div>
