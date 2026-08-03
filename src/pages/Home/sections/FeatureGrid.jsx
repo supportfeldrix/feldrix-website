@@ -76,6 +76,7 @@ const FeatureGrid = () => (
                     component="img"
                     src={feature.photo}
                     alt={feature.title}
+                    loading="lazy"
                     sx={{ width: '100%', height: '100%', objectFit: 'cover', transition: 'transform 0.4s ease' }}
                   />
                   {/* Subtle overlay so icon reads clearly */}

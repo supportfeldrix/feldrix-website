@@ -41,7 +41,7 @@ const PricingPreview = () => (
             <ScrollReveal delay={index * 0.12}>
               <Box
                 sx={{
-                  p: 5,
+                  p: { xs: 3.5, md: 5 },
                   borderRadius: '28px',
                   bgcolor: '#FFFFFF',
                   border: plan.highlighted ? '2px solid' : '1px solid',

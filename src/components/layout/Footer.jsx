@@ -169,7 +169,7 @@ const Footer = () => (
           gap: 2.5,
         }}
       >
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 2, md: 4 }, flexWrap: 'wrap', justifyContent: { xs: 'center', md: 'flex-start' } }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 2, md: 4 }, flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center' }}>
           <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem' }}>
             &copy; {new Date().getFullYear()} Feldrix. All rights reserved.
           </Typography>

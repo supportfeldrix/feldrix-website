@@ -52,6 +52,7 @@ const AppPreview = () => (
                     component="img"
                     src={SCREENSHOT}
                     alt="Feldrix Dashboard"
+                    loading="lazy"
                     sx={{ width: '100%', display: 'block' }}
                   />
                 </Box>
@@ -66,6 +67,7 @@ const AppPreview = () => (
                       component="img"
                       src={SCREENSHOT}
                       alt="Feldrix Tablet View"
+                      loading="lazy"
                       sx={{ width: '100%', display: 'block' }}
                     />
                   </Box>
@@ -83,6 +85,7 @@ const AppPreview = () => (
                       component="img"
                       src={SCREENSHOT}
                       alt="Feldrix Mobile View"
+                      loading="lazy"
                       sx={{ width: '100%', display: 'block' }}
                     />
                   </Box>

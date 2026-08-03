@@ -67,6 +67,7 @@ const AISection = () => (
                 component="img"
                 src="/images/ai-illustration.svg"
                 alt="AI Intelligence Engine"
+                loading="lazy"
                 sx={{ width: '75%', height: '75%', objectFit: 'contain' }}
               />
             </Box>

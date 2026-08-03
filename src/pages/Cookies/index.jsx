@@ -40,53 +40,57 @@ const Cookies = () => (
               These cookies are strictly necessary for the Platform to function correctly. Without them, core features would not work. Essential cookies cannot be disabled.
             </Typography>
             <Box
-              component="table"
-              sx={{
-                width: '100%',
-                borderCollapse: 'collapse',
-                mb: 3,
-                '& th, & td': {
-                  border: '1px solid',
-                  borderColor: 'divider',
-                  px: 2,
-                  py: 1.5,
-                  fontSize: '0.85rem',
-                  textAlign: 'left',
-                },
-                '& th': {
-                  bgcolor: 'grey.50',
-                  fontWeight: 600,
-                  color: 'text.primary',
-                },
-                '& td': {
-                  color: 'text.secondary',
-                },
-              }}
+              sx={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', mb: 3 }}
             >
-              <thead>
-                <tr>
-                  <th>Cookie</th>
-                  <th>Purpose</th>
-                  <th>Duration</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>session_id</td>
-                  <td>Maintains your authenticated session while using the Platform</td>
-                  <td>Session</td>
-                </tr>
-                <tr>
-                  <td>csrf_token</td>
-                  <td>Protects against cross-site request forgery attacks</td>
-                  <td>Session</td>
-                </tr>
-                <tr>
-                  <td>cookie_consent</td>
-                  <td>Remembers your cookie preference choices</td>
-                  <td>12 months</td>
-                </tr>
-              </tbody>
+              <Box
+                component="table"
+                sx={{
+                  width: '100%',
+                  minWidth: 400,
+                  borderCollapse: 'collapse',
+                  '& th, & td': {
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    px: { xs: 1.5, sm: 2 },
+                    py: 1.5,
+                    fontSize: '0.85rem',
+                    textAlign: 'left',
+                  },
+                  '& th': {
+                    bgcolor: 'grey.50',
+                    fontWeight: 600,
+                    color: 'text.primary',
+                  },
+                  '& td': {
+                    color: 'text.secondary',
+                  },
+                }}
+              >
+                <thead>
+                  <tr>
+                    <th>Cookie</th>
+                    <th>Purpose</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>session_id</td>
+                    <td>Maintains your authenticated session while using the Platform</td>
+                    <td>Session</td>
+                  </tr>
+                  <tr>
+                    <td>csrf_token</td>
+                    <td>Protects against cross-site request forgery attacks</td>
+                    <td>Session</td>
+                  </tr>
+                  <tr>
+                    <td>cookie_consent</td>
+                    <td>Remembers your cookie preference choices</td>
+                    <td>12 months</td>
+                  </tr>
+                </tbody>
+              </Box>
             </Box>
 
             {/* 3. Functional Cookies */}
@@ -95,53 +99,57 @@ const Cookies = () => (
               Functional cookies enable enhanced features and personalisation. They remember choices you make (such as your preferred language, region, or display settings) and provide improved, more personal features.
             </Typography>
             <Box
-              component="table"
-              sx={{
-                width: '100%',
-                borderCollapse: 'collapse',
-                mb: 3,
-                '& th, & td': {
-                  border: '1px solid',
-                  borderColor: 'divider',
-                  px: 2,
-                  py: 1.5,
-                  fontSize: '0.85rem',
-                  textAlign: 'left',
-                },
-                '& th': {
-                  bgcolor: 'grey.50',
-                  fontWeight: 600,
-                  color: 'text.primary',
-                },
-                '& td': {
-                  color: 'text.secondary',
-                },
-              }}
+              sx={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', mb: 3 }}
             >
-              <thead>
-                <tr>
-                  <th>Cookie</th>
-                  <th>Purpose</th>
-                  <th>Duration</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>user_preferences</td>
-                  <td>Stores your display preferences (theme, sidebar state, dashboard layout)</td>
-                  <td>12 months</td>
-                </tr>
-                <tr>
-                  <td>last_farm</td>
-                  <td>Remembers the last farm you accessed for quick navigation</td>
-                  <td>30 days</td>
-                </tr>
-                <tr>
-                  <td>locale</td>
-                  <td>Stores your language and regional format preferences</td>
-                  <td>12 months</td>
-                </tr>
-              </tbody>
+              <Box
+                component="table"
+                sx={{
+                  width: '100%',
+                  minWidth: 400,
+                  borderCollapse: 'collapse',
+                  '& th, & td': {
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    px: { xs: 1.5, sm: 2 },
+                    py: 1.5,
+                    fontSize: '0.85rem',
+                    textAlign: 'left',
+                  },
+                  '& th': {
+                    bgcolor: 'grey.50',
+                    fontWeight: 600,
+                    color: 'text.primary',
+                  },
+                  '& td': {
+                    color: 'text.secondary',
+                  },
+                }}
+              >
+                <thead>
+                  <tr>
+                    <th>Cookie</th>
+                    <th>Purpose</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>user_preferences</td>
+                    <td>Stores your display preferences (theme, sidebar state, dashboard layout)</td>
+                    <td>12 months</td>
+                  </tr>
+                  <tr>
+                    <td>last_farm</td>
+                    <td>Remembers the last farm you accessed for quick navigation</td>
+                    <td>30 days</td>
+                  </tr>
+                  <tr>
+                    <td>locale</td>
+                    <td>Stores your language and regional format preferences</td>
+                    <td>12 months</td>
+                  </tr>
+                </tbody>
+              </Box>
             </Box>
             <Typography variant="body1" color="text.secondary">
               If you disable functional cookies, some features may not work as intended, but core Platform functionality will remain available.
@@ -153,53 +161,57 @@ const Cookies = () => (
               Analytics cookies help us understand how visitors interact with the Platform by collecting and reporting information anonymously. This data helps us improve the user experience and identify areas where the Platform can be enhanced.
             </Typography>
             <Box
-              component="table"
-              sx={{
-                width: '100%',
-                borderCollapse: 'collapse',
-                mb: 3,
-                '& th, & td': {
-                  border: '1px solid',
-                  borderColor: 'divider',
-                  px: 2,
-                  py: 1.5,
-                  fontSize: '0.85rem',
-                  textAlign: 'left',
-                },
-                '& th': {
-                  bgcolor: 'grey.50',
-                  fontWeight: 600,
-                  color: 'text.primary',
-                },
-                '& td': {
-                  color: 'text.secondary',
-                },
-              }}
+              sx={{ overflowX: 'auto', WebkitOverflowScrolling: 'touch', mb: 3 }}
             >
-              <thead>
-                <tr>
-                  <th>Cookie</th>
-                  <th>Purpose</th>
-                  <th>Duration</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>_ga</td>
-                  <td>Google Analytics — distinguishes unique users</td>
-                  <td>24 months</td>
-                </tr>
-                <tr>
-                  <td>_ga_*</td>
-                  <td>Google Analytics — maintains session state</td>
-                  <td>24 months</td>
-                </tr>
-                <tr>
-                  <td>_gid</td>
-                  <td>Google Analytics — distinguishes users within a 24-hour window</td>
-                  <td>24 hours</td>
-                </tr>
-              </tbody>
+              <Box
+                component="table"
+                sx={{
+                  width: '100%',
+                  minWidth: 400,
+                  borderCollapse: 'collapse',
+                  '& th, & td': {
+                    border: '1px solid',
+                    borderColor: 'divider',
+                    px: { xs: 1.5, sm: 2 },
+                    py: 1.5,
+                    fontSize: '0.85rem',
+                    textAlign: 'left',
+                  },
+                  '& th': {
+                    bgcolor: 'grey.50',
+                    fontWeight: 600,
+                    color: 'text.primary',
+                  },
+                  '& td': {
+                    color: 'text.secondary',
+                  },
+                }}
+              >
+                <thead>
+                  <tr>
+                    <th>Cookie</th>
+                    <th>Purpose</th>
+                    <th>Duration</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>_ga</td>
+                    <td>Google Analytics — distinguishes unique users</td>
+                    <td>24 months</td>
+                  </tr>
+                  <tr>
+                    <td>_ga_*</td>
+                    <td>Google Analytics — maintains session state</td>
+                    <td>24 months</td>
+                  </tr>
+                  <tr>
+                    <td>_gid</td>
+                    <td>Google Analytics — distinguishes users within a 24-hour window</td>
+                    <td>24 hours</td>
+                  </tr>
+                </tbody>
+              </Box>
             </Box>
             <Typography variant="body1" color="text.secondary">
               Analytics data is aggregated and anonymised. We do not use analytics cookies to personally identify individual users. You may opt out of analytics cookies without affecting your use of the Platform.
