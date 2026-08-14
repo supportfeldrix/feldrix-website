@@ -7,7 +7,7 @@ import AccessTimeOutlinedIcon from '@mui/icons-material/AccessTimeOutlined';
 import LocationOnOutlinedIcon from '@mui/icons-material/LocationOnOutlined';
 
 const contactInfo = [
-  { icon: <EmailOutlinedIcon />, title: 'Email', detail: 'hello@feldrix.com' },
+  { icon: <EmailOutlinedIcon />, title: 'Email', detail: 'support@feldrix.com' },
   { icon: <AccessTimeOutlinedIcon />, title: 'Business Hours', detail: 'Mon - Fri, 08:00 - 17:00 SAST' },
   { icon: <LocationOnOutlinedIcon />, title: 'Location', detail: 'South Africa' },
 ];
