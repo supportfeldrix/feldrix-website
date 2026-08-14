@@ -12,20 +12,40 @@ const contactInfo = [
   { icon: <LocationOnOutlinedIcon />, title: 'Location', detail: 'South Africa' },
 ];
 
+// Formspree endpoint — replace YOUR_FORM_ID with your actual Formspree form ID
+const FORMSPREE_URL = 'https://formspree.io/f/mzepvvrb';
+
 const Contact = () => {
   const [form, setForm] = useState({ name: '', email: '', subject: '', message: '' });
   const [status, setStatus] = useState(null); // 'success' | 'error' | 'loading'
 
   const handleChange = (e) => setForm({ ...form, [e.target.name]: e.target.value });
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     setStatus('loading');
-    // Simulate submission — replace with actual API call
-    setTimeout(() => {
-      setStatus('success');
-      setForm({ name: '', email: '', subject: '', message: '' });
-    }, 1500);
+
+    try {
+      const response = await fetch(FORMSPREE_URL, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({
+          name: form.name,
+          email: form.email,
+          subject: form.subject,
+          message: form.message,
+        }),
+      });
+
+      if (response.ok) {
+        setStatus('success');
+        setForm({ name: '', email: '', subject: '', message: '' });
+      } else {
+        setStatus('error');
+      }
+    } catch {
+      setStatus('error');
+    }
   };
 
   return (
