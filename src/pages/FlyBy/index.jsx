@@ -12,11 +12,8 @@ import {
 import { motion } from 'framer-motion';
 import SEO from '../../components/common/SEO';
 import PrimaryButton from '../../components/buttons/PrimaryButton';
-import SecondaryButton from '../../components/buttons/SecondaryButton';
 import { ScrollReveal, FadeIn } from '../../components/animations';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
-import PlayArrowRoundedIcon from '@mui/icons-material/PlayArrowRounded';
-import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 import { Link } from 'react-router-dom';
 
 const MotionBox = motion.create(Box);
@@ -258,29 +255,6 @@ const HeroSection = () => (
     </Box>
 
     <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-      {/* Back to Feldrix link */}
-      <Box sx={{ mb: 4 }}>
-        <Button
-          component={Link}
-          to="/"
-          startIcon={<ArrowBackIcon sx={{ fontSize: '0.85rem !important' }} />}
-          sx={{
-            color: 'primary.main',
-            fontWeight: 600,
-            fontSize: '0.8rem',
-            textTransform: 'none',
-            px: 2,
-            py: 0.8,
-            borderRadius: '50px',
-            bgcolor: 'rgba(22,163,74,0.06)',
-            border: '1px solid rgba(22,163,74,0.15)',
-            '&:hover': { bgcolor: 'rgba(22,163,74,0.1)' },
-          }}
-        >
-          Back to Feldrix
-        </Button>
-      </Box>
-
       <Grid container spacing={4} alignItems="center">
         {/* Left Side — Text content */}
         <Grid size={{ xs: 12, md: 6 }}>
@@ -351,7 +325,7 @@ const HeroSection = () => (
               FlyBy is a powerful drone operations platform built for agricultural spraying companies and professional pilots.
             </Typography>
 
-            {/* Buttons */}
+            {/* Button */}
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
               <PrimaryButton
                 component="a"
@@ -361,18 +335,6 @@ const HeroSection = () => (
               >
                 Join Early Access
               </PrimaryButton>
-              <SecondaryButton
-                endIcon={<PlayArrowRoundedIcon />}
-                sx={{
-                  px: 3.5,
-                  py: 1.6,
-                  borderColor: 'rgba(15,23,42,0.2)',
-                  color: 'text.primary',
-                  '&:hover': { borderColor: 'primary.main', bgcolor: 'rgba(22,163,74,0.03)' },
-                }}
-              >
-                Watch Preview
-              </SecondaryButton>
             </Stack>
           </motion.div>
         </Grid>
@@ -484,34 +446,66 @@ const features = [
 ];
 
 const FeaturesSection = () => (
-  <Box component="section" sx={{ py: { xs: 6, md: 10 }, bgcolor: '#FFFFFF' }}>
+  <Box component="section" sx={{ py: { xs: 8, md: 12 }, bgcolor: '#FFFFFF' }}>
     <Container maxWidth="lg">
       <ScrollReveal>
         <Typography
           sx={{
             textAlign: 'center',
             fontWeight: 700,
-            fontSize: { xs: '1.1rem', md: '1.3rem' },
+            fontSize: { xs: '1.2rem', md: '1.4rem' },
             color: '#0F172A',
-            mb: { xs: 5, md: 6 },
+            mb: { xs: 6, md: 8 },
           }}
         >
           Powerful features for professional operations
         </Typography>
       </ScrollReveal>
 
-      <Grid container spacing={{ xs: 3, md: 2 }}>
+      <Grid container spacing={{ xs: 4, md: 3 }} justifyContent="center">
         {features.map((feature, index) => (
           <Grid size={{ xs: 6, sm: 4, md: 2 }} key={index}>
             <ScrollReveal delay={index * 0.06}>
-              <Box sx={{ textAlign: 'center' }}>
-                <Box sx={{ mb: 1.5, display: 'flex', justifyContent: 'center' }}>
+              <Box
+                sx={{
+                  textAlign: 'center',
+                  display: 'flex',
+                  flexDirection: 'column',
+                  alignItems: 'center',
+                  height: '100%',
+                }}
+              >
+                <Box
+                  sx={{
+                    mb: 2,
+                    display: 'flex',
+                    justifyContent: 'center',
+                    alignItems: 'center',
+                    width: 64,
+                    height: 64,
+                  }}
+                >
                   <feature.Icon />
                 </Box>
-                <Typography sx={{ fontWeight: 700, fontSize: '0.78rem', color: '#0F172A', mb: 0.5 }}>
+                <Typography
+                  sx={{
+                    fontWeight: 700,
+                    fontSize: '0.82rem',
+                    color: '#0F172A',
+                    mb: 1,
+                    lineHeight: 1.3,
+                  }}
+                >
                   {feature.title}
                 </Typography>
-                <Typography sx={{ fontSize: '0.7rem', color: 'text.secondary', lineHeight: 1.5 }}>
+                <Typography
+                  sx={{
+                    fontSize: '0.72rem',
+                    color: 'text.secondary',
+                    lineHeight: 1.6,
+                    maxWidth: 160,
+                  }}
+                >
                   {feature.description}
                 </Typography>
               </Box>
@@ -615,7 +609,7 @@ const WorkflowSection = () => (
   </Box>
 );
 
-// ─── EARLY ACCESS SECTION (Simplified — email only + image) ──────────────────
+// ─── EARLY ACCESS SECTION (Centered with premium image) ─────────────────────
 
 const EarlyAccessSection = () => {
   const [email, setEmail] = useState('');
@@ -631,23 +625,50 @@ const EarlyAccessSection = () => {
       id="early-access"
       component="section"
       sx={{
-        py: { xs: 6, md: 8 },
+        py: { xs: 8, md: 10 },
         background: 'linear-gradient(135deg, #14532D 0%, #166534 50%, #15803D 100%)',
         position: 'relative',
         overflow: 'hidden',
       }}
     >
+      {/* Subtle pattern overlay */}
+      <Box
+        sx={{
+          position: 'absolute',
+          inset: 0,
+          opacity: 0.03,
+          backgroundImage: 'radial-gradient(circle, white 1px, transparent 1px)',
+          backgroundSize: '32px 32px',
+          pointerEvents: 'none',
+        }}
+      />
+
       <Container maxWidth="lg" sx={{ position: 'relative' }}>
-        <Grid container spacing={4} alignItems="center">
+        <Grid container spacing={5} alignItems="center">
+          {/* Left — Text + Form */}
           <Grid size={{ xs: 12, md: 7 }}>
             <ScrollReveal>
               <Typography
                 variant="h3"
-                sx={{ color: 'white', fontWeight: 700, mb: 1.5, fontSize: { xs: '1.6rem', md: '2rem' } }}
+                sx={{
+                  color: 'white',
+                  fontWeight: 800,
+                  mb: 2,
+                  fontSize: { xs: '1.8rem', md: '2.2rem' },
+                  lineHeight: 1.2,
+                }}
               >
                 Be an Early Access Partner
               </Typography>
-              <Typography sx={{ color: 'rgba(255,255,255,0.7)', mb: 4, fontSize: '0.9rem', maxWidth: 440 }}>
+              <Typography
+                sx={{
+                  color: 'rgba(255,255,255,0.75)',
+                  mb: 4,
+                  fontSize: '0.95rem',
+                  lineHeight: 1.8,
+                  maxWidth: 460,
+                }}
+              >
                 Join a select group of agricultural professionals helping shape the future of drone operations in agriculture.
               </Typography>
             </ScrollReveal>
@@ -657,7 +678,12 @@ const EarlyAccessSection = () => {
                 <Box
                   component="form"
                   onSubmit={handleSubmit}
-                  sx={{ display: 'flex', gap: 1.5, flexDirection: { xs: 'column', sm: 'row' }, maxWidth: 480 }}
+                  sx={{
+                    display: 'flex',
+                    gap: 1.5,
+                    flexDirection: { xs: 'column', sm: 'row' },
+                    maxWidth: 500,
+                  }}
                 >
                   <TextField
                     placeholder="Enter your email address"
@@ -669,14 +695,14 @@ const EarlyAccessSection = () => {
                     sx={{
                       flex: 1,
                       '& .MuiOutlinedInput-root': {
-                        borderRadius: '10px',
+                        borderRadius: '12px',
                         bgcolor: 'rgba(255,255,255,0.95)',
-                        height: 46,
+                        height: 50,
                         '& fieldset': { borderColor: 'transparent' },
                         '&:hover fieldset': { borderColor: 'rgba(22,163,74,0.3)' },
                         '&.Mui-focused fieldset': { borderColor: '#16A34A' },
                       },
-                      '& .MuiInputBase-input': { fontSize: '0.88rem' },
+                      '& .MuiInputBase-input': { fontSize: '0.9rem', px: 2 },
                     }}
                   />
                   <Button
@@ -684,105 +710,115 @@ const EarlyAccessSection = () => {
                     variant="contained"
                     endIcon={<ArrowForwardIcon />}
                     sx={{
-                      bgcolor: 'white',
-                      color: '#15803D',
+                      bgcolor: '#22C55E',
+                      color: 'white',
                       fontWeight: 700,
-                      fontSize: '0.85rem',
-                      borderRadius: '10px',
-                      px: 3,
-                      height: 46,
+                      fontSize: '0.88rem',
+                      borderRadius: '12px',
+                      px: 3.5,
+                      height: 50,
                       textTransform: 'none',
-                      boxShadow: 'none',
+                      boxShadow: '0 4px 16px rgba(22,163,74,0.3)',
                       whiteSpace: 'nowrap',
-                      '&:hover': { bgcolor: '#F0FDF4', boxShadow: '0 4px 12px rgba(0,0,0,0.1)' },
+                      '&:hover': { bgcolor: '#16A34A', boxShadow: '0 6px 20px rgba(22,163,74,0.4)' },
                     }}
                   >
                     Join Early Access
                   </Button>
                 </Box>
               ) : (
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5 }}>
-                  <Box sx={{ width: 32, height: 32, borderRadius: '50%', bgcolor: 'rgba(255,255,255,0.15)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
-                    <Typography sx={{ color: 'white', fontSize: '1rem' }}>✓</Typography>
+                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
+                  <Box
+                    sx={{
+                      width: 40,
+                      height: 40,
+                      borderRadius: '50%',
+                      bgcolor: 'rgba(34,197,94,0.2)',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                    }}
+                  >
+                    <Typography sx={{ color: '#22C55E', fontSize: '1.2rem', fontWeight: 700 }}>✓</Typography>
                   </Box>
-                  <Typography sx={{ color: 'white', fontWeight: 600, fontSize: '0.95rem' }}>
-                    You're on the list! We'll be in touch soon.
-                  </Typography>
+                  <Box>
+                    <Typography sx={{ color: 'white', fontWeight: 700, fontSize: '1rem', mb: 0.3 }}>
+                      You're on the list!
+                    </Typography>
+                    <Typography sx={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>
+                      We'll be in touch with early access details soon.
+                    </Typography>
+                  </Box>
                 </Box>
               )}
             </ScrollReveal>
           </Grid>
 
-          {/* Right side — operator silhouette placeholder */}
-          <Grid size={{ xs: 12, md: 5 }} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'flex-end' }}>
-            <Box
-              sx={{
-                width: 260,
-                height: 200,
-                borderRadius: '16px',
-                overflow: 'hidden',
-                bgcolor: 'rgba(0,0,0,0.15)',
-                display: 'flex',
-                alignItems: 'flex-end',
-                justifyContent: 'center',
-                position: 'relative',
-              }}
-            >
-              {/* Operator silhouette */}
-              <svg width="180" height="180" viewBox="0 0 180 180" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <ellipse cx="90" cy="175" rx="60" ry="10" fill="rgba(0,0,0,0.2)" />
-                <path d="M60 170 C60 130 70 110 90 100 C110 110 120 130 120 170" fill="rgba(255,255,255,0.15)" />
-                <circle cx="90" cy="80" r="20" fill="rgba(255,255,255,0.15)" />
-                <rect x="100" y="100" width="40" height="5" rx="2.5" fill="rgba(255,255,255,0.1)" transform="rotate(-20 120 102)" />
-                <rect x="120" y="85" width="30" height="20" rx="3" fill="rgba(255,255,255,0.08)" transform="rotate(-20 135 95)" />
-              </svg>
-            </Box>
+          {/* Right — Premium drone operator illustration */}
+          <Grid size={{ xs: 12, md: 5 }} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
+            <ScrollReveal delay={0.15}>
+              <Box
+                sx={{
+                  width: 280,
+                  height: 220,
+                  borderRadius: '20px',
+                  overflow: 'hidden',
+                  bgcolor: 'rgba(22,163,74,0.15)',
+                  display: 'flex',
+                  alignItems: 'center',
+                  justifyContent: 'center',
+                  position: 'relative',
+                  backdropFilter: 'blur(8px)',
+                  border: '1px solid rgba(255,255,255,0.08)',
+                }}
+              >
+                {/* Drone operator with controller SVG */}
+                <svg width="200" height="190" viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  {/* Ground */}
+                  <ellipse cx="100" cy="180" rx="70" ry="8" fill="rgba(255,255,255,0.05)" />
+                  
+                  {/* Person body */}
+                  <path d="M80 175 C80 140 85 125 100 118 C115 125 120 140 120 175" fill="rgba(255,255,255,0.18)" />
+                  
+                  {/* Person head */}
+                  <circle cx="100" cy="98" r="16" fill="rgba(255,255,255,0.2)" />
+                  
+                  {/* Cap visor */}
+                  <path d="M84 95 Q100 88 116 95" stroke="rgba(255,255,255,0.15)" strokeWidth="3" strokeLinecap="round" fill="none" />
+                  
+                  {/* Arms holding controller */}
+                  <path d="M82 135 Q75 145 78 155" stroke="rgba(255,255,255,0.15)" strokeWidth="4" strokeLinecap="round" fill="none" />
+                  <path d="M118 135 Q125 145 122 155" stroke="rgba(255,255,255,0.15)" strokeWidth="4" strokeLinecap="round" fill="none" />
+                  
+                  {/* Controller/tablet */}
+                  <rect x="76" y="148" width="48" height="30" rx="4" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" />
+                  <rect x="80" y="152" width="40" height="22" rx="2" fill="rgba(255,255,255,0.06)" />
+                  
+                  {/* Screen content — mini map */}
+                  <path d="M85 160 L95 158 L105 162 L115 157" stroke="rgba(34,197,94,0.5)" strokeWidth="1" />
+                  <circle cx="100" cy="163" r="2" fill="rgba(34,197,94,0.4)" />
+                  
+                  {/* Drone above */}
+                  <g transform="translate(55, 30)">
+                    <rect x="34" y="18" width="22" height="12" rx="6" fill="rgba(255,255,255,0.25)" />
+                    <rect x="14" y="22" width="22" height="4" rx="2" fill="rgba(255,255,255,0.2)" />
+                    <rect x="54" y="22" width="22" height="4" rx="2" fill="rgba(255,255,255,0.2)" />
+                    <ellipse cx="18" cy="19" rx="10" ry="3" fill="rgba(255,255,255,0.12)" />
+                    <ellipse cx="72" cy="19" rx="10" ry="3" fill="rgba(255,255,255,0.12)" />
+                    <circle cx="45" cy="32" r="3" fill="rgba(34,197,94,0.4)" />
+                  </g>
+                  
+                  {/* Signal waves from controller to drone */}
+                  <path d="M100 148 Q100 100 100 55" stroke="rgba(34,197,94,0.2)" strokeWidth="1" strokeDasharray="3 3" />
+                </svg>
+              </Box>
+            </ScrollReveal>
           </Grid>
         </Grid>
       </Container>
     </Box>
   );
 };
-
-// ─── ECOSYSTEM FOOTER BAR ─────────────────────────────────────────────────────
-
-const EcosystemFooter = () => (
-  <Box
-    component="section"
-    sx={{
-      py: 4,
-      bgcolor: '#F8FAFC',
-      borderTop: '1px solid rgba(15,23,42,0.04)',
-    }}
-  >
-    <Container maxWidth="lg">
-      <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: { xs: 2, md: 5 }, flexWrap: 'wrap' }}>
-        <Typography sx={{ fontSize: '0.78rem', color: 'text.tertiary', fontWeight: 500 }}>
-          Part of the Feldrix Ecosystem
-        </Typography>
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: 3 }}>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <Typography sx={{ fontSize: '0.95rem' }}>🌾</Typography>
-            <Box>
-              <Typography sx={{ fontWeight: 700, fontSize: '0.68rem', color: '#0F172A' }}>FELDRIX</Typography>
-              <Typography sx={{ fontSize: '0.58rem', color: 'text.secondary' }}>Farm Management</Typography>
-            </Box>
-          </Box>
-          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
-            <DroneIcon size={18} color="#0F172A" />
-            <Box>
-              <Typography sx={{ fontWeight: 700, fontSize: '0.68rem', color: '#0F172A' }}>FLYBY</Typography>
-              <Typography sx={{ fontSize: '0.58rem', color: 'text.secondary' }}>Drone Operations</Typography>
-            </Box>
-          </Box>
-        </Box>
-        <Typography sx={{ fontSize: '0.72rem', color: 'text.tertiary' }}>
-          &copy; {new Date().getFullYear()} Feldrix. All rights reserved.
-        </Typography>
-      </Box>
-    </Container>
-  </Box>
-);
 
 // ─── MAIN PAGE COMPONENT ──────────────────────────────────────────────────────
 
@@ -799,7 +835,6 @@ const FlyBy = () => (
     <FeaturesSection />
     <WorkflowSection />
     <EarlyAccessSection />
-    <EcosystemFooter />
   </>
 );
 
