@@ -42,18 +42,26 @@ const FlyByAnnouncement = () => (
         position: 'absolute',
         top: { xs: '10%', md: '15%' },
         right: { xs: '5%', md: '12%' },
-        fontSize: { xs: '2.5rem', md: '4rem' },
         opacity: 0.3,
         pointerEvents: 'none',
       }}
     >
-      🚁
+      <svg width="64" height="44" viewBox="0 0 64 44" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <rect x="24" y="16" width="16" height="10" rx="5" fill="white" />
+        <rect x="8" y="19" width="18" height="4" rx="2" fill="white" opacity="0.8" />
+        <rect x="38" y="19" width="18" height="4" rx="2" fill="white" opacity="0.8" />
+        <ellipse cx="12" cy="15" rx="8" ry="2.5" fill="white" opacity="0.4" />
+        <ellipse cx="52" cy="15" rx="8" ry="2.5" fill="white" opacity="0.4" />
+        <ellipse cx="12" cy="27" rx="8" ry="2.5" fill="white" opacity="0.4" />
+        <ellipse cx="52" cy="27" rx="8" ry="2.5" fill="white" opacity="0.4" />
+        <circle cx="32" cy="28" r="2.5" fill="white" opacity="0.6" />
+      </svg>
     </MotionBox>
 
     <Container maxWidth="md" sx={{ position: 'relative', textAlign: 'center' }}>
       <ScrollReveal>
         <Chip
-          label="🚁  NEW FROM FELDRIX"
+          label="✈  NEW FROM FELDRIX"
           size="small"
           sx={{
             mb: 3,
