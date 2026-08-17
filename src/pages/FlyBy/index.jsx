@@ -154,8 +154,8 @@ const HeroSection = () => (
     component="section"
     sx={{
       pt: { xs: 12, md: 14 },
-      pb: { xs: 6, md: 8 },
-      minHeight: { md: '80vh' },
+      pb: { xs: 4, md: 6 },
+      minHeight: { md: '65vh' },
       position: 'relative',
       overflow: 'hidden',
       bgcolor: '#FFFFFF',
@@ -191,8 +191,8 @@ const HeroSection = () => (
         transition={{ duration: 5, repeat: Infinity, ease: 'easeInOut' }}
         sx={{
           position: 'absolute',
-          top: '18%',
-          right: '8%',
+          top: '22%',
+          right: '12%',
           display: { xs: 'none', md: 'block' },
         }}
       >
@@ -255,7 +255,7 @@ const HeroSection = () => (
     </Box>
 
     <Container maxWidth="lg" sx={{ position: 'relative', zIndex: 1 }}>
-      <Grid container spacing={4} alignItems="center">
+      <Grid container spacing={4} alignItems="center" sx={{ minHeight: { md: '50vh' } }}>
         {/* Left Side — Text content */}
         <Grid size={{ xs: 12, md: 6 }}>
           <motion.div
@@ -643,178 +643,166 @@ const EarlyAccessSection = () => {
         }}
       />
 
-      <Container maxWidth="lg" sx={{ position: 'relative' }}>
-        <Grid container spacing={5} alignItems="center">
-          {/* Left — Text + Form */}
-          <Grid size={{ xs: 12, md: 7 }}>
-            <ScrollReveal>
-              <Typography
-                variant="h3"
+      <Container maxWidth="md" sx={{ position: 'relative', textAlign: 'center' }}>
+        <ScrollReveal>
+          <Typography
+            variant="h3"
+            sx={{
+              color: 'white',
+              fontWeight: 800,
+              mb: 2,
+              fontSize: { xs: '1.8rem', md: '2.2rem' },
+              lineHeight: 1.2,
+            }}
+          >
+            Be an Early Access Partner
+          </Typography>
+          <Typography
+            sx={{
+              color: 'rgba(255,255,255,0.75)',
+              mb: 5,
+              fontSize: '0.95rem',
+              lineHeight: 1.8,
+              maxWidth: 500,
+              mx: 'auto',
+            }}
+          >
+            Join a select group of agricultural professionals helping shape the future of drone operations in agriculture.
+          </Typography>
+        </ScrollReveal>
+
+        <ScrollReveal delay={0.1}>
+          {!submitted ? (
+            <Box
+              component="form"
+              onSubmit={handleSubmit}
+              sx={{
+                display: 'flex',
+                gap: 1.5,
+                flexDirection: { xs: 'column', sm: 'row' },
+                maxWidth: 500,
+                mx: 'auto',
+                mb: 6,
+              }}
+            >
+              <TextField
+                placeholder="Enter your email address"
+                type="email"
+                value={email}
+                onChange={(e) => setEmail(e.target.value)}
+                required
+                size="small"
                 sx={{
+                  flex: 1,
+                  '& .MuiOutlinedInput-root': {
+                    borderRadius: '12px',
+                    bgcolor: 'rgba(255,255,255,0.95)',
+                    height: 50,
+                    '& fieldset': { borderColor: 'transparent' },
+                    '&:hover fieldset': { borderColor: 'rgba(22,163,74,0.3)' },
+                    '&.Mui-focused fieldset': { borderColor: '#16A34A' },
+                  },
+                  '& .MuiInputBase-input': { fontSize: '0.9rem', px: 2 },
+                }}
+              />
+              <Button
+                type="submit"
+                variant="contained"
+                endIcon={<ArrowForwardIcon />}
+                sx={{
+                  bgcolor: '#22C55E',
                   color: 'white',
-                  fontWeight: 800,
-                  mb: 2,
-                  fontSize: { xs: '1.8rem', md: '2.2rem' },
-                  lineHeight: 1.2,
+                  fontWeight: 700,
+                  fontSize: '0.88rem',
+                  borderRadius: '12px',
+                  px: 3.5,
+                  height: 50,
+                  textTransform: 'none',
+                  boxShadow: '0 4px 16px rgba(22,163,74,0.3)',
+                  whiteSpace: 'nowrap',
+                  '&:hover': { bgcolor: '#16A34A', boxShadow: '0 6px 20px rgba(22,163,74,0.4)' },
                 }}
               >
-                Be an Early Access Partner
-              </Typography>
-              <Typography
-                sx={{
-                  color: 'rgba(255,255,255,0.75)',
-                  mb: 4,
-                  fontSize: '0.95rem',
-                  lineHeight: 1.8,
-                  maxWidth: 460,
-                }}
-              >
-                Join a select group of agricultural professionals helping shape the future of drone operations in agriculture.
-              </Typography>
-            </ScrollReveal>
-
-            <ScrollReveal delay={0.1}>
-              {!submitted ? (
-                <Box
-                  component="form"
-                  onSubmit={handleSubmit}
-                  sx={{
-                    display: 'flex',
-                    gap: 1.5,
-                    flexDirection: { xs: 'column', sm: 'row' },
-                    maxWidth: 500,
-                  }}
-                >
-                  <TextField
-                    placeholder="Enter your email address"
-                    type="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                    required
-                    size="small"
-                    sx={{
-                      flex: 1,
-                      '& .MuiOutlinedInput-root': {
-                        borderRadius: '12px',
-                        bgcolor: 'rgba(255,255,255,0.95)',
-                        height: 50,
-                        '& fieldset': { borderColor: 'transparent' },
-                        '&:hover fieldset': { borderColor: 'rgba(22,163,74,0.3)' },
-                        '&.Mui-focused fieldset': { borderColor: '#16A34A' },
-                      },
-                      '& .MuiInputBase-input': { fontSize: '0.9rem', px: 2 },
-                    }}
-                  />
-                  <Button
-                    type="submit"
-                    variant="contained"
-                    endIcon={<ArrowForwardIcon />}
-                    sx={{
-                      bgcolor: '#22C55E',
-                      color: 'white',
-                      fontWeight: 700,
-                      fontSize: '0.88rem',
-                      borderRadius: '12px',
-                      px: 3.5,
-                      height: 50,
-                      textTransform: 'none',
-                      boxShadow: '0 4px 16px rgba(22,163,74,0.3)',
-                      whiteSpace: 'nowrap',
-                      '&:hover': { bgcolor: '#16A34A', boxShadow: '0 6px 20px rgba(22,163,74,0.4)' },
-                    }}
-                  >
-                    Join Early Access
-                  </Button>
-                </Box>
-              ) : (
-                <Box sx={{ display: 'flex', alignItems: 'center', gap: 2 }}>
-                  <Box
-                    sx={{
-                      width: 40,
-                      height: 40,
-                      borderRadius: '50%',
-                      bgcolor: 'rgba(34,197,94,0.2)',
-                      display: 'flex',
-                      alignItems: 'center',
-                      justifyContent: 'center',
-                    }}
-                  >
-                    <Typography sx={{ color: '#22C55E', fontSize: '1.2rem', fontWeight: 700 }}>✓</Typography>
-                  </Box>
-                  <Box>
-                    <Typography sx={{ color: 'white', fontWeight: 700, fontSize: '1rem', mb: 0.3 }}>
-                      You're on the list!
-                    </Typography>
-                    <Typography sx={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>
-                      We'll be in touch with early access details soon.
-                    </Typography>
-                  </Box>
-                </Box>
-              )}
-            </ScrollReveal>
-          </Grid>
-
-          {/* Right — Premium drone operator illustration */}
-          <Grid size={{ xs: 12, md: 5 }} sx={{ display: { xs: 'none', md: 'flex' }, justifyContent: 'center' }}>
-            <ScrollReveal delay={0.15}>
+                Join Early Access
+              </Button>
+            </Box>
+          ) : (
+            <Box sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center', gap: 2, mb: 6 }}>
               <Box
                 sx={{
-                  width: 280,
-                  height: 220,
-                  borderRadius: '20px',
-                  overflow: 'hidden',
-                  bgcolor: 'rgba(22,163,74,0.15)',
+                  width: 40,
+                  height: 40,
+                  borderRadius: '50%',
+                  bgcolor: 'rgba(34,197,94,0.2)',
                   display: 'flex',
                   alignItems: 'center',
                   justifyContent: 'center',
-                  position: 'relative',
-                  backdropFilter: 'blur(8px)',
-                  border: '1px solid rgba(255,255,255,0.08)',
                 }}
               >
-                {/* Drone operator with controller SVG */}
-                <svg width="200" height="190" viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  {/* Ground */}
-                  <ellipse cx="100" cy="180" rx="70" ry="8" fill="rgba(255,255,255,0.05)" />
-                  
-                  {/* Person body */}
-                  <path d="M80 175 C80 140 85 125 100 118 C115 125 120 140 120 175" fill="rgba(255,255,255,0.18)" />
-                  
-                  {/* Person head */}
-                  <circle cx="100" cy="98" r="16" fill="rgba(255,255,255,0.2)" />
-                  
-                  {/* Cap visor */}
-                  <path d="M84 95 Q100 88 116 95" stroke="rgba(255,255,255,0.15)" strokeWidth="3" strokeLinecap="round" fill="none" />
-                  
-                  {/* Arms holding controller */}
-                  <path d="M82 135 Q75 145 78 155" stroke="rgba(255,255,255,0.15)" strokeWidth="4" strokeLinecap="round" fill="none" />
-                  <path d="M118 135 Q125 145 122 155" stroke="rgba(255,255,255,0.15)" strokeWidth="4" strokeLinecap="round" fill="none" />
-                  
-                  {/* Controller/tablet */}
-                  <rect x="76" y="148" width="48" height="30" rx="4" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" />
-                  <rect x="80" y="152" width="40" height="22" rx="2" fill="rgba(255,255,255,0.06)" />
-                  
-                  {/* Screen content — mini map */}
-                  <path d="M85 160 L95 158 L105 162 L115 157" stroke="rgba(34,197,94,0.5)" strokeWidth="1" />
-                  <circle cx="100" cy="163" r="2" fill="rgba(34,197,94,0.4)" />
-                  
-                  {/* Drone above */}
-                  <g transform="translate(55, 30)">
-                    <rect x="34" y="18" width="22" height="12" rx="6" fill="rgba(255,255,255,0.25)" />
-                    <rect x="14" y="22" width="22" height="4" rx="2" fill="rgba(255,255,255,0.2)" />
-                    <rect x="54" y="22" width="22" height="4" rx="2" fill="rgba(255,255,255,0.2)" />
-                    <ellipse cx="18" cy="19" rx="10" ry="3" fill="rgba(255,255,255,0.12)" />
-                    <ellipse cx="72" cy="19" rx="10" ry="3" fill="rgba(255,255,255,0.12)" />
-                    <circle cx="45" cy="32" r="3" fill="rgba(34,197,94,0.4)" />
-                  </g>
-                  
-                  {/* Signal waves from controller to drone */}
-                  <path d="M100 148 Q100 100 100 55" stroke="rgba(34,197,94,0.2)" strokeWidth="1" strokeDasharray="3 3" />
-                </svg>
+                <Typography sx={{ color: '#22C55E', fontSize: '1.2rem', fontWeight: 700 }}>✓</Typography>
               </Box>
-            </ScrollReveal>
-          </Grid>
-        </Grid>
+              <Box sx={{ textAlign: 'left' }}>
+                <Typography sx={{ color: 'white', fontWeight: 700, fontSize: '1rem', mb: 0.3 }}>
+                  You're on the list!
+                </Typography>
+                <Typography sx={{ color: 'rgba(255,255,255,0.6)', fontSize: '0.85rem' }}>
+                  We'll be in touch with early access details soon.
+                </Typography>
+              </Box>
+            </Box>
+          )}
+        </ScrollReveal>
+
+        {/* Premium drone operator card */}
+        <ScrollReveal delay={0.2}>
+          <Box
+            sx={{
+              width: { xs: '100%', sm: 320 },
+              height: 240,
+              borderRadius: '20px',
+              overflow: 'hidden',
+              bgcolor: 'rgba(22,163,74,0.15)',
+              display: 'flex',
+              alignItems: 'center',
+              justifyContent: 'center',
+              mx: 'auto',
+              backdropFilter: 'blur(8px)',
+              border: '1px solid rgba(255,255,255,0.08)',
+            }}
+          >
+            {/* Drone operator with controller SVG */}
+            <svg width="200" height="190" viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg">
+              {/* Ground */}
+              <ellipse cx="100" cy="180" rx="70" ry="8" fill="rgba(255,255,255,0.05)" />
+              {/* Person body */}
+              <path d="M80 175 C80 140 85 125 100 118 C115 125 120 140 120 175" fill="rgba(255,255,255,0.18)" />
+              {/* Person head */}
+              <circle cx="100" cy="98" r="16" fill="rgba(255,255,255,0.2)" />
+              {/* Cap visor */}
+              <path d="M84 95 Q100 88 116 95" stroke="rgba(255,255,255,0.15)" strokeWidth="3" strokeLinecap="round" fill="none" />
+              {/* Arms holding controller */}
+              <path d="M82 135 Q75 145 78 155" stroke="rgba(255,255,255,0.15)" strokeWidth="4" strokeLinecap="round" fill="none" />
+              <path d="M118 135 Q125 145 122 155" stroke="rgba(255,255,255,0.15)" strokeWidth="4" strokeLinecap="round" fill="none" />
+              {/* Controller/tablet */}
+              <rect x="76" y="148" width="48" height="30" rx="4" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" />
+              <rect x="80" y="152" width="40" height="22" rx="2" fill="rgba(255,255,255,0.06)" />
+              {/* Screen content — mini map */}
+              <path d="M85 160 L95 158 L105 162 L115 157" stroke="rgba(34,197,94,0.5)" strokeWidth="1" />
+              <circle cx="100" cy="163" r="2" fill="rgba(34,197,94,0.4)" />
+              {/* Drone above */}
+              <g transform="translate(55, 30)">
+                <rect x="34" y="18" width="22" height="12" rx="6" fill="rgba(255,255,255,0.25)" />
+                <rect x="14" y="22" width="22" height="4" rx="2" fill="rgba(255,255,255,0.2)" />
+                <rect x="54" y="22" width="22" height="4" rx="2" fill="rgba(255,255,255,0.2)" />
+                <ellipse cx="18" cy="19" rx="10" ry="3" fill="rgba(255,255,255,0.12)" />
+                <ellipse cx="72" cy="19" rx="10" ry="3" fill="rgba(255,255,255,0.12)" />
+                <circle cx="45" cy="32" r="3" fill="rgba(34,197,94,0.4)" />
+              </g>
+              {/* Signal waves from controller to drone */}
+              <path d="M100 148 Q100 100 100 55" stroke="rgba(34,197,94,0.2)" strokeWidth="1" strokeDasharray="3 3" />
+            </svg>
+          </Box>
+        </ScrollReveal>
       </Container>
     </Box>
   );
