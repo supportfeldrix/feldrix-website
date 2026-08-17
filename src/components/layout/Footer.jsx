@@ -12,6 +12,7 @@ const columns = [
     links: [
       { label: 'Features', path: '/features' },
       { label: 'Pricing', path: '/pricing' },
+      { label: 'FlyBy', path: '/flyby', badge: 'NEW' },
     ],
   },
   {
@@ -91,7 +92,7 @@ const Footer = () => (
             </Typography>
 
             <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', lineHeight: 1.85, mb: 4, maxWidth: 300 }}>
-              Feldrix helps modern farmers manage livestock, crops, machinery, finances and daily operations from one intelligent cloud platform.
+              Technology that grows with you. Feldrix helps modern farmers and drone operators manage their operations from one intelligent ecosystem.
             </Typography>
 
             {/* Contact details */}
@@ -152,6 +153,38 @@ const Footer = () => (
               </Box>
             </Box>
           ))}
+        </Box>
+      </Box>
+
+      {/* Ecosystem strip */}
+      <Box
+        sx={{
+          py: 4,
+          display: 'flex',
+          flexDirection: { xs: 'column', md: 'row' },
+          alignItems: 'center',
+          justifyContent: 'center',
+          gap: { xs: 3, md: 6 },
+        }}
+      >
+        <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.03em' }}>
+          Part of the Feldrix Ecosystem
+        </Typography>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: 4 }}>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Typography sx={{ fontSize: '1.1rem' }}>🌾</Typography>
+            <Box>
+              <Typography sx={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.75rem', fontWeight: 700 }}>FELDRIX</Typography>
+              <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem' }}>Farm Management</Typography>
+            </Box>
+          </Box>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Typography sx={{ fontSize: '1.1rem' }}>🚁</Typography>
+            <Box>
+              <Typography sx={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.75rem', fontWeight: 700 }}>FLYBY</Typography>
+              <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem' }}>Drone Operations</Typography>
+            </Box>
+          </Box>
         </Box>
       </Box>
 

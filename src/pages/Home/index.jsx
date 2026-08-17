@@ -1,5 +1,6 @@
 import SEO from '../../components/common/SEO';
 import HeroSection from './sections/HeroSection';
+import FlyByAnnouncement from './sections/FlyByAnnouncement';
 import TrustSection from './sections/TrustSection';
 import FeatureGrid from './sections/FeatureGrid';
 import AppPreview from './sections/AppPreview';
@@ -22,6 +23,8 @@ const Home = () => (
     />
     {/* White hero */}
     <HeroSection />
+    {/* Dark FlyBy announcement */}
+    <FlyByAnnouncement />
     {/* Light green trust */}
     <TrustSection />
     {/* White modules */}

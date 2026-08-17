@@ -11,6 +11,7 @@ const Contact = lazy(() => import('../pages/Contact'));
 const Privacy = lazy(() => import('../pages/Privacy'));
 const Terms = lazy(() => import('../pages/Terms'));
 const Cookies = lazy(() => import('../pages/Cookies'));
+const FlyBy = lazy(() => import('../pages/FlyBy'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 // Placeholder pages
@@ -51,6 +52,7 @@ const router = createBrowserRouter([
       { path: 'partners', element: <Partners /> },
       { path: 'api', element: <API /> },
       { path: 'stories', element: <CustomerStories /> },
+      { path: 'flyby', element: <FlyBy /> },
       { path: 'login', element: <ExternalRedirect to="https://app.feldrix.com/login" /> },
       { path: 'register', element: <ExternalRedirect to="https://app.feldrix.com/register" /> },
       { path: '*', element: <NotFound /> },
