@@ -68,7 +68,7 @@ const Footer = () => (
 
     {/* Main content */}
     <Container maxWidth={false} sx={{ maxWidth: 1400, px: { xs: 3, md: 6 } }}>
-      <Box sx={{ pt: { xs: 10, md: 14 }, pb: { xs: 8, md: 10 } }}>
+      <Box sx={{ pt: { xs: 5, md: 7 }, pb: { xs: 4, md: 5 } }}>
         <Box
           sx={{
             display: 'grid',
@@ -77,26 +77,26 @@ const Footer = () => (
               sm: 'repeat(2, 1fr)',
               md: '2.4fr 1fr 1fr 1fr',
             },
-            gap: { xs: 5, md: 6 },
+            gap: { xs: 3, md: 4 },
             alignItems: 'start',
           }}
         >
           {/* Column 1 — Brand */}
           <Box>
-            <Box sx={{ mb: 4 }}>
+            <Box sx={{ mb: 2.5 }}>
               <Logo variant="light" size="large" />
             </Box>
 
-            <Typography sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '1rem', fontWeight: 500, mb: 2, fontStyle: 'italic' }}>
+            <Typography sx={{ color: 'rgba(255,255,255,0.7)', fontSize: '0.95rem', fontWeight: 500, mb: 1.25, fontStyle: 'italic' }}>
               Farm Smarter. Grow Stronger.
             </Typography>
 
-            <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.85rem', lineHeight: 1.85, mb: 4, maxWidth: 300 }}>
+            <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem', lineHeight: 1.65, mb: 2.5, maxWidth: 300 }}>
               Technology that grows with you. Feldrix helps modern farmers and drone operators manage their operations from one intelligent ecosystem.
             </Typography>
 
             {/* Contact details */}
-            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.5 }}>
+            <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1 }}>
               {contactDetails.map((item) => (
                 <Box key={item.text} sx={{ display: 'flex', alignItems: 'center', gap: 1.2 }}>
                   <Box sx={{ color: 'rgba(255,255,255,0.35)' }}>{item.icon}</Box>
@@ -111,10 +111,10 @@ const Footer = () => (
           {/* Link columns */}
           {columns.map((col) => (
             <Box key={col.title}>
-              <Typography sx={{ fontWeight: 700, color: 'rgba(255,255,255,0.9)', mb: 3.5, fontSize: '0.9rem', letterSpacing: '0.01em' }}>
+              <Typography sx={{ fontWeight: 700, color: 'rgba(255,255,255,0.9)', mb: 2, fontSize: '0.88rem', letterSpacing: '0.01em' }}>
                 {col.title}
               </Typography>
-              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 2.2 }}>
+              <Box sx={{ display: 'flex', flexDirection: 'column', gap: 1.4 }}>
                 {col.links.map((link) => (
                   <Box key={link.label} sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
                     <Typography
@@ -159,12 +159,12 @@ const Footer = () => (
       {/* Ecosystem strip */}
       <Box
         sx={{
-          py: 4,
+          py: 2,
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           alignItems: 'center',
           justifyContent: 'center',
-          gap: { xs: 3, md: 6 },
+          gap: { xs: 1.5, md: 3 },
         }}
       >
         <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.8rem', fontWeight: 600, letterSpacing: '0.03em' }}>
@@ -194,15 +194,15 @@ const Footer = () => (
       {/* Bottom bar */}
       <Box
         sx={{
-          py: 4,
+          py: 2,
           display: 'flex',
           flexDirection: { xs: 'column', md: 'row' },
           justifyContent: 'space-between',
           alignItems: 'center',
-          gap: 2.5,
+          gap: 1.5,
         }}
       >
-        <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 2, md: 4 }, flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center' }}>
+        <Box sx={{ display: 'flex', alignItems: 'center', gap: { xs: 1.5, md: 3 }, flexWrap: 'wrap', justifyContent: 'center', textAlign: 'center' }}>
           <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.82rem' }}>
             &copy; {new Date().getFullYear()} Feldrix. All rights reserved.
           </Typography>
