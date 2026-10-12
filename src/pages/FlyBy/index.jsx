@@ -329,11 +329,13 @@ const HeroSection = () => (
             <Stack direction={{ xs: 'column', sm: 'row' }} spacing={2}>
               <PrimaryButton
                 component="a"
-                href="#early-access"
+                href="https://fly.feldrix.com/"
+                target="_blank"
+                rel="noopener noreferrer"
                 endIcon={<ArrowForwardIcon />}
                 sx={{ px: 4, py: 1.6 }}
               >
-                Join Early Access
+                Join Access
               </PrimaryButton>
             </Stack>
           </motion.div>
@@ -412,6 +414,20 @@ const EcosystemBar = () => (
             <Box>
               <Typography sx={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.03em', color: '#0F172A' }}>FLYBY</Typography>
               <Typography sx={{ fontSize: '0.7rem', color: 'text.secondary' }}>Drone Operations Software</Typography>
+            </Box>
+          </Box>
+
+          {/* Arrow */}
+          <Typography sx={{ color: 'text.tertiary', fontSize: '1.2rem', display: { xs: 'none', sm: 'block' } }}>→</Typography>
+
+          {/* WineRix */}
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1.5, px: 3, py: 2, borderRadius: '14px', bgcolor: 'white', border: '1px solid rgba(22,163,74,0.1)', boxShadow: '0 2px 8px rgba(0,0,0,0.03)' }}>
+            <Box sx={{ width: 40, height: 40, borderRadius: '10px', bgcolor: 'rgba(22,163,74,0.08)', display: 'flex', alignItems: 'center', justifyContent: 'center' }}>
+              <Typography sx={{ fontSize: '1.3rem' }}>🍇</Typography>
+            </Box>
+            <Box>
+              <Typography sx={{ fontWeight: 700, fontSize: '0.8rem', letterSpacing: '0.03em', color: '#0F172A' }}>WINERIX</Typography>
+              <Typography sx={{ fontSize: '0.7rem', color: 'text.secondary' }}>Intelligent management for modern vineyards</Typography>
             </Box>
           </Box>
 
