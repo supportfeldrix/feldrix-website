@@ -1,9 +1,7 @@
 import { Box, Container, Typography, Chip, Stack } from '@mui/material';
 import { motion } from 'framer-motion';
-import { Link } from 'react-router-dom';
 import { ScrollReveal } from '../../../components/animations';
 import PrimaryButton from '../../../components/buttons/PrimaryButton';
-import SecondaryButton from '../../../components/buttons/SecondaryButton';
 import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 const MotionBox = motion.create(Box);
@@ -134,29 +132,15 @@ const FlyByAnnouncement = () => (
           justifyContent="center"
         >
           <PrimaryButton
-            component={Link}
-            to="/flyby"
+            component="a"
+            href="https://fly.feldrix.com/"
+            target="_blank"
+            rel="noopener noreferrer"
             endIcon={<ArrowForwardIcon />}
             sx={{ px: 4.5, py: 1.7 }}
           >
             Explore FlyBy
           </PrimaryButton>
-          <SecondaryButton
-            component={Link}
-            to="/flyby#early-access"
-            sx={{
-              px: 4,
-              py: 1.7,
-              borderColor: 'rgba(255,255,255,0.2)',
-              color: 'rgba(255,255,255,0.85)',
-              '&:hover': {
-                borderColor: '#22C55E',
-                bgcolor: 'rgba(22,163,74,0.08)',
-              },
-            }}
-          >
-            Request Early Access
-          </SecondaryButton>
         </Stack>
       </ScrollReveal>
     </Container>
