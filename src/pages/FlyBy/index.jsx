@@ -671,7 +671,7 @@ const EarlyAccessSection = () => {
               lineHeight: 1.2,
             }}
           >
-            Be an Early Access Partner
+            Request Information
           </Typography>
           <Typography
             sx={{
@@ -739,7 +739,7 @@ const EarlyAccessSection = () => {
                   '&:hover': { bgcolor: '#16A34A', boxShadow: '0 6px 20px rgba(22,163,74,0.4)' },
                 }}
               >
-                Join Early Access
+                Join Access
               </Button>
             </Box>
           ) : (
@@ -769,56 +769,6 @@ const EarlyAccessSection = () => {
           )}
         </ScrollReveal>
 
-        {/* Premium drone operator card */}
-        <ScrollReveal delay={0.2}>
-          <Box
-            sx={{
-              width: { xs: '100%', sm: 320 },
-              height: 240,
-              borderRadius: '20px',
-              overflow: 'hidden',
-              bgcolor: 'rgba(22,163,74,0.15)',
-              display: 'flex',
-              alignItems: 'center',
-              justifyContent: 'center',
-              mx: 'auto',
-              backdropFilter: 'blur(8px)',
-              border: '1px solid rgba(255,255,255,0.08)',
-            }}
-          >
-            {/* Drone operator with controller SVG */}
-            <svg width="200" height="190" viewBox="0 0 200 190" fill="none" xmlns="http://www.w3.org/2000/svg">
-              {/* Ground */}
-              <ellipse cx="100" cy="180" rx="70" ry="8" fill="rgba(255,255,255,0.05)" />
-              {/* Person body */}
-              <path d="M80 175 C80 140 85 125 100 118 C115 125 120 140 120 175" fill="rgba(255,255,255,0.18)" />
-              {/* Person head */}
-              <circle cx="100" cy="98" r="16" fill="rgba(255,255,255,0.2)" />
-              {/* Cap visor */}
-              <path d="M84 95 Q100 88 116 95" stroke="rgba(255,255,255,0.15)" strokeWidth="3" strokeLinecap="round" fill="none" />
-              {/* Arms holding controller */}
-              <path d="M82 135 Q75 145 78 155" stroke="rgba(255,255,255,0.15)" strokeWidth="4" strokeLinecap="round" fill="none" />
-              <path d="M118 135 Q125 145 122 155" stroke="rgba(255,255,255,0.15)" strokeWidth="4" strokeLinecap="round" fill="none" />
-              {/* Controller/tablet */}
-              <rect x="76" y="148" width="48" height="30" rx="4" fill="rgba(255,255,255,0.12)" stroke="rgba(255,255,255,0.15)" strokeWidth="1.5" />
-              <rect x="80" y="152" width="40" height="22" rx="2" fill="rgba(255,255,255,0.06)" />
-              {/* Screen content — mini map */}
-              <path d="M85 160 L95 158 L105 162 L115 157" stroke="rgba(34,197,94,0.5)" strokeWidth="1" />
-              <circle cx="100" cy="163" r="2" fill="rgba(34,197,94,0.4)" />
-              {/* Drone above */}
-              <g transform="translate(55, 30)">
-                <rect x="34" y="18" width="22" height="12" rx="6" fill="rgba(255,255,255,0.25)" />
-                <rect x="14" y="22" width="22" height="4" rx="2" fill="rgba(255,255,255,0.2)" />
-                <rect x="54" y="22" width="22" height="4" rx="2" fill="rgba(255,255,255,0.2)" />
-                <ellipse cx="18" cy="19" rx="10" ry="3" fill="rgba(255,255,255,0.12)" />
-                <ellipse cx="72" cy="19" rx="10" ry="3" fill="rgba(255,255,255,0.12)" />
-                <circle cx="45" cy="32" r="3" fill="rgba(34,197,94,0.4)" />
-              </g>
-              {/* Signal waves from controller to drone */}
-              <path d="M100 148 Q100 100 100 55" stroke="rgba(34,197,94,0.2)" strokeWidth="1" strokeDasharray="3 3" />
-            </svg>
-          </Box>
-        </ScrollReveal>
       </Container>
     </Box>
   );

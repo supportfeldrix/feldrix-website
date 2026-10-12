@@ -13,6 +13,7 @@ const columns = [
       { label: 'Features', path: '/features' },
       { label: 'Pricing', path: '/pricing' },
       { label: 'FlyBy', path: '/flyby', badge: 'NEW' },
+      { label: 'WineRix', path: '/winerix', badge: 'NEW' },
     ],
   },
   {
@@ -183,6 +184,13 @@ const Footer = () => (
             <Box>
               <Typography sx={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.75rem', fontWeight: 700 }}>FLYBY</Typography>
               <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem' }}>Drone Operations</Typography>
+            </Box>
+          </Box>
+          <Box sx={{ display: 'flex', alignItems: 'center', gap: 1 }}>
+            <Typography sx={{ fontSize: '1.1rem' }}>🍇</Typography>
+            <Box>
+              <Typography sx={{ color: 'rgba(255,255,255,0.8)', fontSize: '0.75rem', fontWeight: 700 }}>WINERIX</Typography>
+              <Typography sx={{ color: 'rgba(255,255,255,0.4)', fontSize: '0.6rem' }}>Vineyard Intelligence</Typography>
             </Box>
           </Box>
         </Box>

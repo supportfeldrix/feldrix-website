@@ -12,6 +12,7 @@ const Privacy = lazy(() => import('../pages/Privacy'));
 const Terms = lazy(() => import('../pages/Terms'));
 const Cookies = lazy(() => import('../pages/Cookies'));
 const FlyBy = lazy(() => import('../pages/FlyBy'));
+const WineRix = lazy(() => import('../pages/WineRix'));
 const NotFound = lazy(() => import('../pages/NotFound'));
 
 // Placeholder pages
@@ -53,6 +54,7 @@ const router = createBrowserRouter([
       { path: 'api', element: <API /> },
       { path: 'stories', element: <CustomerStories /> },
       { path: 'flyby', element: <FlyBy /> },
+      { path: 'winerix', element: <WineRix /> },
       { path: 'login', element: <ExternalRedirect to="https://app.feldrix.com/login" /> },
       { path: 'register', element: <ExternalRedirect to="https://app.feldrix.com/register" /> },
       { path: '*', element: <NotFound /> },

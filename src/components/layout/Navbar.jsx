@@ -23,6 +23,7 @@ const navLinks = [
   { label: 'Home', path: '/' },
   { label: 'Features', path: '/features' },
   { label: 'FlyBy', path: '/flyby' },
+  { label: 'WineRix', path: '/winerix' },
   { label: 'Pricing', path: '/pricing' },
   { label: 'About', path: '/about' },
   { label: 'Contact', path: '/contact' },
